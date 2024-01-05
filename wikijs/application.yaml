@@ -10,7 +10,7 @@ spec:
   project: default
   sources:
     - Chart: wiki
-      repoURL: https://charts.js.wiki/wiki
+      repoURL: https://charts.js.wiki/
       targetRevision: 2.2.20
       helm:
         valueFiles:
