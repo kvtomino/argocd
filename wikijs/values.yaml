@@ -1,7 +1,5 @@
 postgresql:
-  enabled: true
-  postgresqlDatabase: wiki
-  postgresql:
+  postgresqlUser: wiki-js
   existingSecret: wiki-js-postgresql-secret
   existingSecretKey: postgresql-password
   persistence:
