@@ -6,16 +6,12 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL: https://charts.js.wiki/
+    - Chart: wiki
+      repoURL: https://charts.js.wiki/
+      targetRevision: 2.2.20
       helm:
-        chart: wiki
         valueFiles:
           - $wikijs/values.yaml # Path to your values file in the repo
-    - repoURL: https://github.com/kvtomino/argocd.git
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: wiki
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    - repoURL: 'https://github.com/kvtomino/argocd'
+      targetRevision: HEAD
+      ref: values
