@@ -6,6 +6,7 @@ metadata:
 spec:
   destination:
     namespace: wiki
+    name: in-cluster
   project: default
   sources:
     - Chart: wiki
