@@ -4,6 +4,9 @@ metadata:
   name: wiki-js
   namespace: argocd
 spec:
+  destination:
+    namespace: wiki
+    name: wikijs
   project: default
   sources:
     - Chart: wiki
