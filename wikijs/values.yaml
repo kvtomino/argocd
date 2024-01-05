@@ -1,5 +1,5 @@
 postgresql:
-  postgresqlUser: wiki-js
+  postgresqlUser: postgres
   existingSecret: wiki-js-postgresql-secret
   existingSecretKey: postgresql-password
   persistence:
