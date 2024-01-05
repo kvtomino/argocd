@@ -20,10 +20,3 @@ ingress:
     - secretName: wiki-tls-secret
       hosts:
         - wiki.fistik.be
-
-nodeSelector:
-  kubernetes.io/role: worker
-
-tolerations: []
-
-affinity: {}
