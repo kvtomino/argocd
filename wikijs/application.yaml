@@ -14,7 +14,7 @@ spec:
       targetRevision: 2.2.20
       helm:
         valueFiles:
-          - $wikijs/values.yaml # Path to your values file in the repo
+          - $values/wikijs/values.yaml
     - repoURL: 'https://github.com/kvtomino/argocd'
       targetRevision: HEAD
       ref: values
