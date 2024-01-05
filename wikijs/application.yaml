@@ -5,12 +5,13 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://charts.js.wiki
-    helm:
-      chart: wiki
-      valueFiles:
-      - values.yaml  # Path to your values file
+  sources:
+    - repoURL: https://charts.js.wiki/
+      helm:
+        chart: wiki
+        valueFiles:
+          - $wikijs/values.yaml # Path to your values file in the repo
+    - repoURL: https://github.com/kvtomino/argocd.git
   destination:
     server: https://kubernetes.default.svc
     namespace: wiki
