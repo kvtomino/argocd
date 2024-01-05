@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: wiki-js
+  name: wiki-js-test
   namespace: argocd
 spec:
   project: default
@@ -9,12 +9,6 @@ spec:
     repoURL: https://charts.js.wiki
     helm:
       chart: wiki
-      valueFiles:
-        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: wiki
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
