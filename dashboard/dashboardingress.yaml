@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: kubernetes-dashboard-ingress
   namespace: kubernetes-dashboard
+  annotations:
+    passthrough.ako.vmware.com/enabled: "true"
 spec:
   tls:
   - hosts:
