@@ -3,9 +3,6 @@ kind: Ingress
 metadata:
   name: kubernetes-dashboard-ingress
   namespace: kubernetes-dashboard
-  annotations:
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-    # Add any additional annotations if needed
 spec:
   tls:
   - hosts:
