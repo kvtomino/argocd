@@ -16,6 +16,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: heimdall
+            name: heimdall-service
             port:
               number: 80
