@@ -4,9 +4,9 @@ metadata:
   name: heimdall-pvc
   namespace: heimdall
 spec:
-  storageClassName: vsan-file-sc
+  storageClassName: vsan-block-sc
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 2Gi
