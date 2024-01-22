@@ -1,0 +1,21 @@
+postgresql:
+  postgresqlUser: postgres
+  existingSecret: wikidev-js-postgresql-secret
+  existingSecretKey: postgresql-password
+  persistence:
+    enabled: true
+    size: 15Gi
+    storageClass: "vsan-file-sc"
+
+ingress:
+  enabled: true
+  annotations: {}
+  hosts:
+    - host: dashboard.fistik.be
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - secretName: dashboard-tls-secret
+      hosts:
+        - dashboard.fistik.be

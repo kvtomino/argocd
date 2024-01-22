@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wiki-jsdev
+  namespace: argocd
+spec:
+  destination:
+    namespace: wikidev
+    name: in-cluster
+  project: default
+  sources:
+    - chart: wiki
+      repoURL: https://charts.js.wiki/
+      targetRevision: 2.2.20
+      helm:
+        valueFiles:
+          - $values/wikijsdev/values.yaml
+    - repoURL: 'https://github.com/kvtomino/argocd'
+      targetRevision: HEAD
+      ref: values
