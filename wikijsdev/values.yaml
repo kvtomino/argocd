@@ -4,9 +4,7 @@ postgresql:
   existingSecretKey: postgresql-password
   persistence:
     enabled: true
-    size: 15Gi
-    storageClass: "vsan-file-sc"
-    accessModes: ReadWriteMany
+    existingClaim: wikidev-pvc
 ingress:
   enabled: true
   annotations: {}
