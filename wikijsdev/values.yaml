@@ -6,7 +6,7 @@ postgresql:
     enabled: true
     size: 15Gi
     storageClass: "vsan-file-sc"
-
+    accessModes: ReadWriteMany
 ingress:
   enabled: true
   annotations: {}
