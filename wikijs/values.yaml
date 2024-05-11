@@ -6,3 +6,6 @@ postgresql:
     enabled: true
     existingclaim: wikijspv
     size: 15Gi
+ingress:
+  enabled: false
+
